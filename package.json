@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Site showcasing skills, technologies and ambitions",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Themba001/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Themba001/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Themba001/Portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
