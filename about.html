@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Vokari</title>
-  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2d4b3488b4.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d1b2a, #1e3a8a, #000000);
+      background-size: 400% 400%;
+      animation: aurora 30s ease infinite;
+    }
+
+    @keyframes aurora {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="text-white font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-gray-950 fixed top-0 w-full z-50 shadow-lg">
+  <nav class="bg-black/80 fixed top-0 w-full z-50 shadow-lg backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
+      <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Vokari</h1>
       <ul class="flex space-x-6 text-sm md:text-base">
-        <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-orange-400">About</a></li>
-        <li><a href="projects.html" class="hover:text-orange-400">Projects</a></li>
-        <li><a href="resume.html" class="hover:text-orange-400">Resume</a></li>
-        <li><a href="skills.html" class="hover:text-orange-400">Skills</a></li>
-        <li><a href="contact.html" class="hover:text-orange-400">Contact</a></li>
+        <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-purple-300">About</a></li>
+        <li><a href="projects.html" class="hover:text-purple-300">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-purple-300">Resume</a></li>
+        <li><a href="skills.html" class="hover:text-purple-300">Skills</a></li>
+        <li><a href="contact.html" class="hover:text-purple-300">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="pt-32 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-orange-500 mb-6">About Me</h2>
+  <!-- About Section -->
+  <section class="pt-32 px-6 max-w-4xl mx-auto animate-fade-in">
+    <h2 class="text-3xl font-bold text-purple-400 mb-6 text-center">About Me</h2>
     <p class="text-gray-300 text-lg leading-relaxed mb-4">
-      Hi, I’m Themba Mabuza, a 4th-year BSc IT student at North-West University (Vaal Campus), majoring in Software Development. I’m passionate about building powerful, impactful solutions — especially in education, AI, and emergency services.
+      Hi, I’m Themba Mabuza, a final-year BSc IT student at North-West University (Vaal Campus), majoring in Software Development. I am passionate about building meaningful digital solutions that solve real-world problems.
     </p>
     <p class="text-gray-300 text-lg leading-relaxed mb-4">
-      I’ve built mobile apps that help students request ambulances with a shake, and I’ve taught Python and C++ to first-year students as a Student Assistant. I’m aiming to join Amazon in Cape Town and work on global-scale systems.
+      I’ve developed a student safety app that alerts emergency services with a shake, taught Python and C++ to first-years, and led group projects focused on full-stack development. I aspire to join Amazon in Cape Town and work on cutting-edge tech.
     </p>
     <p class="text-gray-300 text-lg leading-relaxed">
-      I love Eminem, solving real-world problems with code, and turning dreams into blazing lines of logic. Welcome to my journey.
+      Beyond coding, I enjoy exploring new music, especially Eminem and soul-infused tracks, and dreaming up systems that make the world better.
     </p>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-60 text-white py-6 mt-10">
+    <div class="flex justify-center space-x-6">
+      <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover:text-purple-400"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="hover:text-purple-400"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://tiktok.com/@YOUR_TIKTOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-tiktok fa-lg"></i></a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="hover:text-purple-400"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+    <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

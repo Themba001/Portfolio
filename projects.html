@@ -2,46 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Vokari</title>
-  <link href="./css/style.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans">
+  <link href="./css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2d4b3488b4.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d1b2a, #1e3a8a, #000000);
+      background-size: 400% 400%;
+      animation: aurora 30s ease infinite;
+    }
 
+    @keyframes aurora {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .details {
+      display: none;
+    }
+    .card.active .details {
+      display: block;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</head>
+<body class="text-white font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-gray-950 fixed top-0 w-full z-50 shadow-lg">
+  <nav class="bg-black/80 fixed top-0 w-full z-50 shadow-lg backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
+      <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Vokari</h1>
       <ul class="flex space-x-6 text-sm md:text-base">
-        <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-orange-400">About</a></li>
-        <li><a href="projects.html" class="hover:text-orange-400">Projects</a></li>
-        <li><a href="resume.html" class="hover:text-orange-400">Resume</a></li>
-        <li><a href="skills.html" class="hover:text-orange-400">Skills</a></li>
-        <li><a href="contact.html" class="hover:text-orange-400">Contact</a></li>
+        <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-purple-300">About</a></li>
+        <li><a href="projects.html" class="hover:text-purple-300">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-purple-300">Resume</a></li>
+        <li><a href="skills.html" class="hover:text-purple-300">Skills</a></li>
+        <li><a href="contact.html" class="hover:text-purple-300">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Projects Section -->
   <section class="pt-32 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-orange-500 mb-10 text-center">My Projects</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div class="bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-all">
-        <h3 class="text-xl font-semibold text-orange-400">Emergency Shake App</h3>
-        <p class="text-gray-300 text-sm mb-2">Mobile app to alert ambulance services using shake detection.</p>
-        <a href="https://github.com/Themba001/EmergencyConnectors1" class="text-orange-500 underline text-sm">View on GitHub</a>
+    <h2 class="text-3xl font-bold text-purple-400 mb-10 text-center">My Projects</h2>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Emergency App -->
+      <div class="bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow card">
+        <h3 class="text-xl font-semibold text-purple-300">Emergency Shake App</h3>
+        <p class="text-gray-300 text-sm">Tap for more info</p>
+        <div class="details mt-4">
+          <p class="text-gray-200 text-sm mb-2">This mobile application was designed for students living off-campus. The user pre-profiles the app with their name, address, medical info, and emergency contacts. During a crisis, they don’t have to unlock the device — simply shake it.</p>
+          <p class="text-gray-200 text-sm mb-2">The app detects the shake, gets the user's real-time location using GPS, and sends all the information to emergency responders instantly.</p>
+          <p class="text-gray-200 text-sm">Built with: Flutter, Firebase, Google Maps API, Geolocation, Twilio API.</p>
+        </div>
       </div>
 
-      <div class="bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-all">
-        <h3 class="text-xl font-semibold text-orange-400">Student Portal</h3>
-        <p class="text-gray-300 text-sm mb-2">Web portal for accessing study material, tasks and results.</p>
-        <a href="https://github.com/YOUR_USERNAME/Student-Portal" class="text-orange-500 underline text-sm">View on GitHub</a>
+      <!-- eBakers Site -->
+      <div class="bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow card">
+        <h3 class="text-xl font-semibold text-purple-300">eBakers Online Store</h3>
+        <p class="text-gray-300 text-sm">Tap for more info</p>
+        <div class="details mt-4">
+          <p class="text-gray-200 text-sm mb-2">A bakery e-commerce site that lets customers browse, customize, and place orders for baked goods online. Includes secure payment and delivery tracking.</p>
+          <p class="text-gray-200 text-sm">Built with: HTML, TailwindCSS, JavaScript, Firebase, Stripe API.</p>
+          <a href="https://github.com/YOUR_USERNAME/eBakers" target="_blank" class="text-purple-400 underline text-sm">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Geekulcha Site -->
+      <div class="bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow card">
+        <h3 class="text-xl font-semibold text-purple-300">Geekulcha Platform</h3>
+        <p class="text-gray-300 text-sm">Tap for more info</p>
+        <div class="details mt-4">
+          <p class="text-gray-200 text-sm mb-2">A tech community hub website built for showcasing innovation events, hackathons, and learning resources aimed at empowering African youth in tech.</p>
+          <p class="text-gray-200 text-sm">Built with: React, TailwindCSS, Node.js, Express, MongoDB.</p>
+          <a href="https://github.com/YOUR_USERNAME/geekulcha-site" target="_blank" class="text-purple-400 underline text-sm">View on GitHub</a>
+        </div>
       </div>
 
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-60 text-white py-6 mt-10">
+    <div class="flex justify-center space-x-6">
+      <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover:text-purple-400"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="hover:text-purple-400"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://tiktok.com/@YOUR_TIKTOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-tiktok fa-lg"></i></a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="hover:text-purple-400"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+    <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
