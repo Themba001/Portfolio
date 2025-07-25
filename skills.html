@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | Vokari</title>
-  <link href="./css/style.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/2d4b3488b4.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #0d1b2a, #1e3a8a, #000000);
-      background-size: 400% 400%;
-      animation: aurora 30s ease infinite;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Vokari</title>
+    <link href="./css/style.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-pVhGVyYtd0A5fdYj3oJ5e9mY9jcdbJcUE4NekIC7mpINvg1OcSABPSTTVLMIeG3lmeUcu8oXz1i4CW6dWNHmJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-    @keyframes aurora {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-  </style>
-</head>
-<body class="text-white font-sans">
+    <style>
+      body {
+        background: linear-gradient(135deg, #0d1b2a, #1e3a8a, #000000);
+        background-size: 400% 400%;
+        animation: aurora 30s ease infinite;
+      }
 
-  <!-- Navbar -->
-  <nav class="bg-black/80 fixed top-0 w-full z-50 shadow-lg backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
-      <ul class="flex space-x-6 text-sm md:text-base">
-        <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
-        <li><a href="about.html" class="hover:text-purple-300">About</a></li>
-        <li><a href="projects.html" class="hover:text-purple-300">Projects</a></li>
-        <li><a href="resume.html" class="hover:text-purple-300">Resume</a></li>
-        <li><a href="skills.html" class="hover:text-purple-300">Skills</a></li>
-        <li><a href="contact.html" class="hover:text-purple-300">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+      @keyframes aurora {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans">
+    <!-- Navbar -->
+    <nav class="bg-black/80 fixed top-0 w-full z-50 shadow-lg backdrop-blur-md">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
+        <ul class="flex space-x-6 text-sm md:text-base">
+          <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-purple-300">About</a></li>
+          <li>
+            <a href="projects.html" class="hover:text-purple-300">Projects</a>
+          </li>
+          <li>
+            <a href="resume.html" class="hover:text-purple-300">Resume</a>
+          </li>
+          <li>
+            <a href="skills.html" class="hover:text-purple-300">Skills</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-purple-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Skills Section -->
-  <section class="pt-32 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-purple-400 mb-10 text-center">Skills</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">Java</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">Python</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">C++</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">C#</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">HTML & CSS</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">TailwindCSS</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">JavaScript</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">React</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">Node.js</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">Firebase</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">SQL</span>
-      <span class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all">Git & GitHub</span>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section class="pt-32 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-purple-400 mb-10 text-center">
+        Skills
+      </h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >Java</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >Python</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >C++</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >C#</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >HTML & CSS</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >TailwindCSS</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >JavaScript</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >React</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >Node.js</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >Firebase</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >SQL</span
+        >
+        <span
+          class="bg-purple-600 bg-opacity-20 border border-purple-400 text-center py-4 rounded-lg shadow hover:scale-105 transition-all"
+          >Git & GitHub</span
+        >
+      </div>
+    </section>
 
-  <!-- Footer -->
+   <!-- Footer -->
   <footer class="bg-black bg-opacity-60 text-white py-6 mt-10">
-    <div class="flex justify-center space-x-6">
-      <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover:text-purple-400"><i class="fab fa-github fa-lg"></i></a>
-      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="hover:text-purple-400"><i class="fab fa-linkedin fa-lg"></i></a>
-      <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-facebook fa-lg"></i></a>
-      <a href="https://tiktok.com/@YOUR_TIKTOK" target="_blank" class="hover:text-purple-400"><i class="fab fa-tiktok fa-lg"></i></a>
-      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="hover:text-purple-400"><i class="fab fa-instagram fa-lg"></i></a>
+    <div class="flex justify-center space-x-6 items-center">
+      <a href="https://github.com/Themba001" target="_blank" class="hover:opacity-80 transition-all">
+        <img src="images/git.png" alt="GitHub"
+            style="width: 24px; height: 24px; object-fit: contain;" />
+      </a>
+      <a href="https://linkedin.com/in/themba-mabuza-a0476a219" target="_blank" class="hover:opacity-80 transition-all">
+        <img src="images/LinkedIn.jpg" alt="LinkedIn"
+            style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px;" />
+      </a>
     </div>
     <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
   </footer>
-
-</body>
+  </body>
 </html>
