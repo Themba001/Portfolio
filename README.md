@@ -70,7 +70,7 @@ This site can be deployed using GitHub Pages, Netlify, or Vercel. The current se
 Author
 Themba Mabuza
 Software Development Major — North-West University
-Email: thembamabuza@gmail.com
-GitHub: https://github.com/YOUR_USERNAME
-LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+Email: artinadutjoammakoma@gmail.com
+GitHub: https://github.com/Themba001
+LinkedIn: https://linkedin.com/in/themba-mabuza-a0476a219
 
