@@ -27,14 +27,13 @@
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
 
-      <!-- Hamburger button -->
-      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+      <!-- Hamburger button (visible on small screens) -->
+      <button id="menu-btn" class="md:hidden text-white text-xl" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
       </button>
 
-      <ul class="flex space-x-6 text-sm md:text-base">
+      <!-- Menu: hidden on small screens, flex on md+ -->
+      <ul id="nav-menu" class="hidden md:flex space-x-6 text-sm md:text-base">
         <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
         <li><a href="about.html" class="hover:text-purple-300">About</a></li>
         <li><a href="projects.html" class="hover:text-purple-300">Projects</a></li>
@@ -51,7 +50,7 @@
       <img src="images/Mabuza.jpg" alt="Profile Picture" class="w-full h-full object-cover">
     </div>
     <h2 class="text-4xl sm:text-5xl font-extrabold text-purple-400 mb-4 animate-fade-in-down">Themba Mabuza</h2>
-    <p class="text-lg sm:text-xl text-purple-200 max-w-xl mb-6 animate-fade-in">BSc IT Student | Software Developer | Amazon SDE Intern</p>
+    <p class="text-lg sm:text-xl text-purple-200 max-w-xl mb-6 animate-fade-in">BSc IT Student | Software Developer | Future Amazon Engineer</p>
     <div class="flex space-x-4">
       <a href="projects.html" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-xl font-semibold text-sm shadow-md transition-all">View Projects</a>
       <a href="contact.html" class="px-6 py-3 bg-transparent border-2 border-purple-500 hover:bg-purple-600 rounded-xl font-semibold text-sm shadow-md transition-all">Contact Me</a>
@@ -74,17 +73,8 @@
     <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
   </footer>
 
+<script src="./js/navbar.js"></script>
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-</script>
 
 </body>
 </html>
