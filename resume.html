@@ -51,8 +51,13 @@
       <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
 
       <!-- Hamburger button (visible on small screens) -->
-      <button id="menu-btn" class="md:hidden text-white text-xl" aria-label="Toggle menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+      <button id="menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
 
       <!-- Menu: hidden on small screens, flex on md+ -->
