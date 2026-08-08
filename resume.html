@@ -18,7 +18,30 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    .card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .details {
+      display: none;
+    }
+    .card.active .details {
+      display: block;
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 </head>
 <body class="text-white font-sans">
 
@@ -41,36 +64,123 @@
 <section class="pt-32 px-6 max-w-4xl mx-auto animate-fade-in">
   <h2 class="text-3xl font-bold text-purple-400 mb-6 text-center">My Resume</h2>
 
-  <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg shadow-md mb-6">
-    <h3 class="text-xl font-semibold text-purple-300">Education</h3>
-    <p class="text-gray-200 mb-2">BSc Information Technology — North-West University (2022–2025)</p>
-    <p class="text-gray-200">Grade 12 — Mamellong Comprehensive School (2020)</p>
+  <!-- Professional Experience -->
+  <div class="card bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow-lg mb-6">
+    <div class="flex justify-between items-start flex-col md:flex-row">
+      <div>
+        <h3 class="text-2xl font-semibold text-purple-300">Professional Experience</h3>
+        <p class="text-gray-300 mt-2">Amazon Web Services internship, frontline cloud and front-end engineering experience.</p>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 md:mt-0">Tap for more info</p>
+    </div>
+
+    <div class="details mt-4 bg-gray-900 bg-opacity-60 p-6 rounded-lg shadow-inner">
+      <div class="flex justify-between items-start flex-col md:flex-row">
+        <div>
+          <h4 class="text-xl font-semibold">Software Development Engineer Intern</h4>
+          <p class="text-purple-300">Amazon Web Services (AWS)</p>
+        </div>
+        <span class="text-gray-400">Nov 2025 – Feb 2026</span>
+      </div>
+      <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2">
+        <li>Contributed to front-end and cloud-focused engineering projects within the Amazon EC2 Console.</li>
+        <li>Built and maintained React and TypeScript components in a production software environment.</li>
+        <li>Debugged production issues, wrote tests, and participated in code reviews.</li>
+        <li>Collaborated with experienced engineers using professional development workflows and AWS best practices.</li>
+        <li>Gained hands-on experience with scalable cloud interfaces, networking, and customer-facing software systems.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg shadow-md mb-6">
-    <h3 class="text-xl font-semibold text-purple-300">Experience</h3>
-    <ul class="text-gray-200 list-disc list-inside">
-      <li>Student Assistant – Python & C++ Tutor (2024–2025)</li>
-      <li>Built Emergency Mobile App for off-campus students</li>
-      <li>Full-stack role in group web app project</li>
-    </ul>
+  <!-- Leadership & Teaching -->
+  <div class="card bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow-lg mb-6">
+    <div class="flex justify-between items-start flex-col md:flex-row">
+      <div>
+        <h3 class="text-2xl font-semibold text-purple-300">Leadership & Teaching</h3>
+        <p class="text-gray-300 mt-2">Mentoring, project coordination, and student innovation leadership.</p>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 md:mt-0">Tap for more info</p>
+    </div>
+
+    <div class="details mt-4 bg-gray-900 bg-opacity-60 p-6 rounded-lg shadow-inner">
+      <div>
+        <h4 class="text-xl font-semibold">Project Manager & Programming Mentor</h4>
+        <p class="text-purple-300">Geekulcha Student Society (NWU Vaal)</p>
+      </div>
+      <ul class="list-disc list-inside text-gray-300 mt-4 space-y-2">
+        <li>Led student software and innovation initiatives, including hackathon and technology community projects.</li>
+        <li>Mentored first-year students in Python and C++ programming fundamentals.</li>
+        <li>Coordinated technical project planning and collaboration within student engineering teams.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg shadow-md mb-6">
-    <h3 class="text-xl font-semibold text-purple-300">Skills</h3>
-    <ul class="text-gray-200 list-disc list-inside columns-2 sm:columns-3">
-      <li>Java, Python, C++, C#</li>
-      <li>HTML, CSS, Tailwind, JavaScript, React</li>
-      <li>SQL, Firebase, Node.js, APIs</li>
-      <li>Git, GitHub</li>
-      <li>Problem Solving</li>
-      <li>Analytical & Communication Skills</li>
-    </ul>
+  <!-- Education -->
+  <div class="card bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow-lg mb-6">
+    <div class="flex justify-between items-start flex-col md:flex-row">
+      <div>
+        <h3 class="text-2xl font-semibold text-purple-300">Education</h3>
+        <p class="text-gray-300 mt-2">Software engineering and cloud technologies foundation at NWU Vaal.</p>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 md:mt-0">Tap for more info</p>
+    </div>
+
+    <div class="details mt-4 bg-gray-900 bg-opacity-60 p-6 rounded-lg shadow-inner">
+      <div class="flex justify-between items-start flex-col md:flex-row">
+        <div>
+          <h4 class="text-xl font-semibold">Bachelor of Science in Information Technology</h4>
+          <p class="text-purple-300">North-West University (Vaal Campus)</p>
+        </div>
+        <span class="text-gray-400">Expected Graduation: 2027</span>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Focus areas include software engineering, backend development, databases, networking, and cloud technologies.
+      </p>
+    </div>
   </div>
 
-  <div class="text-center">
-    <a href="./documents/Mabuza_Themba_CV.docx" download class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-xl font-semibold text-sm shadow-md transition-all">
-      <i class="fas fa-download mr-2"></i> Download My CV (PDF)
+  <!-- Technical Skills -->
+  <div class="card bg-gray-800 bg-opacity-40 p-4 rounded-lg shadow-lg mb-6">
+    <div class="flex justify-between items-start flex-col md:flex-row">
+      <div>
+        <h3 class="text-2xl font-semibold text-purple-300">Technical Skills</h3>
+        <p class="text-gray-300 mt-2">Hands-on cloud, frontend, backend, database, and networking technologies.</p>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 md:mt-0">Tap for more info</p>
+    </div>
+
+    <div class="details mt-4 bg-gray-900 bg-opacity-60 p-6 rounded-lg shadow-inner">
+      <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+        <div>
+          <p><strong class="text-white">Languages:</strong> TypeScript, JavaScript, Python, Java, C++, SQL</p>
+        </div>
+        <div>
+          <p><strong class="text-white">Frontend:</strong> React, HTML, CSS, Tailwind CSS</p>
+        </div>
+        <div>
+          <p><strong class="text-white">Backend:</strong> FastAPI, Node.js, Express</p>
+        </div>
+        <div>
+          <p><strong class="text-white">Databases:</strong> PostgreSQL, Firebase, MongoDB</p>
+        </div>
+        <div>
+          <p><strong class="text-white">Cloud & Tools:</strong> AWS, Git, GitHub, VS Code, Netlify</p>
+        </div>
+        <div>
+          <p><strong class="text-white">Networking:</strong> Cisco Packet Tracer, VLANs, Routing, DHCP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Resume -->
+  <div class="text-center pt-6">
+    <a
+      href="resume.pdf"
+      download
+      class="inline-block bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+    >
+      Download Resume (PDF)
     </a>
   </div>
 </section>
@@ -88,7 +198,7 @@
             style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px;" />
       </a>
     </div>
-    <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
+    <p class="text-sm text-center text-gray-400 mt-4">&copy; 2026 Themba Mabuza. All rights reserved.</p>
   </footer>
 
 </body>
