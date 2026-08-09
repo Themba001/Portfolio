@@ -26,6 +26,14 @@
   <nav class="bg-black/80 fixed top-0 w-full z-50 shadow-lg backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
+
+      <!-- Hamburger button -->
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
       <ul class="flex space-x-6 text-sm md:text-base">
         <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
         <li><a href="about.html" class="hover:text-purple-300">About</a></li>
@@ -40,15 +48,26 @@
   <!-- About Section -->
   <section class="pt-32 px-6 max-w-4xl mx-auto animate-fade-in">
     <h2 class="text-3xl font-bold text-purple-400 mb-6 text-center">About Me</h2>
-    <p class="text-gray-300 text-lg leading-relaxed mb-4">
-      Hi, I’m Themba Mabuza, a final year BSc IT student at North-West University (Vaal Campus), majoring in Software Development. I am passionate about building meaningful digital solutions that solve real world problems.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed mb-4">
-      I’ve developed a student safety app that alerts emergency services with a shake, taught Python and C++ to first years, and led group projects focused on full-stack development. I aspire to join Amazon in Cape Town and work on cutting edge tech.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      Beyond coding, I enjoy exploring new music, especially Eminem and soul infused tracks, and dreaming up systems that make the world better.
-    </p>
+    <h2>About Me</h2>
+      <p>
+        I’m Mabuza, a BSc Information Technology student at North-West University with a strong interest in backend engineering, cloud technologies, and building software that solves real-world problems.
+      </p>
+
+      <p>
+        Over the past year, I gained hands-on industry experience as a <strong>Software Development Engineer Intern at Amazon</strong>, where I worked on production systems, collaborated with experienced engineers, and contributed to software used at scale.
+      </p>
+
+      <p>
+        My experience includes backend development with <strong>Python, Java, FastAPI, PostgreSQL, and cloud technologies</strong>, as well as building full-stack applications and deploying projects from development to production. I enjoy designing APIs, working with databases, improving system reliability, and writing clean, maintainable code.
+      </p>
+
+      <p>
+        In addition to my industry experience, I’ve mentored first-year students in Python and C++, helping them build a strong foundation in programming. I’m passionate about continuous learning and enjoy exploring software architecture, distributed systems, and scalable backend development.
+      </p>
+
+      <p>
+        I’m currently focused on growing into a software engineer who builds reliable, high-impact systems and contributes meaningfully to engineering teams.
+      </p>
   </section>
 
   <!-- Footer -->
@@ -66,5 +85,16 @@
     <p class="text-sm text-center text-gray-400 mt-4">&copy; 2025 Themba Mabuza. All rights reserved.</p>
   </footer>
 
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
 </body>
 </html>
