@@ -50,18 +50,14 @@
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-purple-400 animate-pulse">Mabuza</h1>
 
-      <!-- Hamburger button (visible on small screens) -->
-      <button id="menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">
-        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      <!-- Hamburger button -->
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
-      <!-- Menu: hidden on small screens, flex on md+ -->
-      <ul id="nav-menu" class="hidden md:flex space-x-6 text-sm md:text-base">
+      <ul class="flex space-x-6 text-sm md:text-base">
         <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
         <li><a href="about.html" class="hover:text-purple-300">About</a></li>
         <li><a href="projects.html" class="hover:text-purple-300">Projects</a></li>
@@ -188,11 +184,11 @@
   <!-- Download Resume -->
   <div class="text-center pt-6">
     <a
-      href="resume.pdf"
+      href="documents/Mabuza_Themba_CV.docx"
       download
       class="inline-block bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
     >
-      Download Resume (PDF)
+      Download Resume (Word Document)
     </a>
   </div>
 </section>
@@ -213,7 +209,16 @@
     <p class="text-sm text-center text-gray-400 mt-4">&copy; 2026 Themba Mabuza. All rights reserved.</p>
   </footer>
 
-<script src="./js/navbar.js"></script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
 
 </body>
 </html>
